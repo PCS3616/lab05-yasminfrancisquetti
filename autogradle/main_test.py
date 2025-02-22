@@ -78,3 +78,16 @@ def test_2():
     mvn_output = outputfile.read().replace('\n', '')
     assert mvn_output == "61", \
         f"Seu código não está correto\nConfira seu envio."
+
+def main():
+    print("Iniciando o teste 1...")
+    test_1()
+    print("Teste 1 passou com sucesso!")
+        
+    print("Iniciando o teste 2...")
+    test_2()
+    print("Teste 2 passou com sucesso!")
+
+if __name__ == "__main__":
+    main()
+
