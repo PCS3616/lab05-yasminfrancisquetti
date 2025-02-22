@@ -21,8 +21,9 @@ LOOP2	LD n		; iniciar mais um loop - colocar n no acumulador
 END2	LD QP
 	MM M		; colocar QP no endereço M da memoria // aqui esta o erro
 	LD M		; colocar M no acumulador
-	AD MMOPCODE
+	AD OPCODE
 	MM EXECMM
+	LD QP
 	EXECMM K /0000
 	AD DOIS		; somar 2 no acumulador
 	MM M		; colocar o acumulador no M
@@ -40,4 +41,4 @@ UM 	K /0001 ; 1
 DOIS 	K /0002 ; 2
 QP	K /0000 ; quadrado perfeito
 n	K /0000 ; contador do loop
-MMOPCODE 	K /8000
+OPCODE 	K /8000
