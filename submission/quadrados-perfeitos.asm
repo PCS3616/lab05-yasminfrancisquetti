@@ -19,12 +19,12 @@ LOOP2	LD n		; iniciar mais um loop - colocar n no acumulador
 	MM QP		; colocar o acumulador em QP
 	JP LOOP2	; voltar pro inicio do loop
 END2	LD QP
-	MM M		; colocar QP no endereço M da memoria // aqui esta o erro
 	LD M		; colocar M no acumulador
 	AD OPCODE
 	MM EXECMM
 	LD QP
 	EXECMM K /0000
+	LD M
 	AD DOIS		; somar 2 no acumulador
 	MM M		; colocar o acumulador no M
 	LD N		
