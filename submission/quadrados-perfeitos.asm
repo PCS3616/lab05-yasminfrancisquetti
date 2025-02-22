@@ -9,14 +9,14 @@ LOOP1	LD NZ 		; iniciar loop - colocar N no acumulador
 	LD NZ
 	MM n		
 LOOP2	LD n		; iniciar mais um loop - colocar n no acumulador
-	JZ END2
-	SB UM		; subtrair 1 do acumulador
-	MM n		; colocar o acumulador em n
 	JZ END2		; jump pra fora do loop if zero
 	ML DOIS		; multiplicar o acumulador por 2
 	SB UM		; subtrair 1 do acumulador
 	AD QP		; somar o acumulador com QP
 	MM QP		; colocar o acumulador em QP
+	LD n
+	SB UM		; subtrair 1 do acumulador
+	MM n		; colocar o acumulador em n
 	JP LOOP2	; voltar pro inicio do loop
 END2	LD QP
 	LD M		; colocar M no acumulador
