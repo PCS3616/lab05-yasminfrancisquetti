@@ -3,10 +3,10 @@
 	HM /000
 
 START	K /0000
-LOOP1	LD N 		; iniciar loop - colocar N no acumulador
+LOOP1	LD NZ 		; iniciar loop - colocar N no acumulador
 	SB SSC		; subtrair 65 do acumulador
 	JZ END		; jump pra fora do loop if zero
-	LD N
+	LD NZ
 	MM n		
 LOOP2	LD n		; iniciar mais um loop - colocar n no acumulador
 	JZ END2
@@ -27,15 +27,15 @@ END2	LD QP
 	LD M
 	AD DOIS		; somar 2 no acumulador
 	MM M		; colocar o acumulador no M
-	LD N		
+	LD NZ		
 	AD UM
-	MM N		; incrementar N
+	MM NZ		; incrementar N
 	JP LOOP1	; voltar pro start
 END	RS START
 
 @ /0200
 M	K /0100 ; local da memoria
-N	K /0000 ; em qual N estou
+NZ	K /0000 ; em qual N estou
 SSC	K /0041 ; 65
 UM 	K /0001 ; 1
 DOIS 	K /0002 ; 2
