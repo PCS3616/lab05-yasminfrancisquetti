@@ -41,4 +41,4 @@ UM 	K /0001 ; 1
 DOIS 	K /0002 ; 2
 QP	K /0000 ; quadrado perfeito
 n	K /0000 ; contador do loop
-OPCODE 	K /8000
+OPCODE 	K /9000
