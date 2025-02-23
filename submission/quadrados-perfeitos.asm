@@ -30,9 +30,9 @@ END2	LD QP
 	LD NZ		
 	AD UM
 	MM NZ		; incrementar N
-	JP LOOP1	; voltar pro start
 	LD ZERO
 	MM QP
+	JP LOOP1	; voltar pro start
 END	RS START
 
 @ /0200
